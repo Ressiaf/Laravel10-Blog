@@ -14,5 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    return "Root";
+});
+
+
+Route::get('courses' , function (){
+    return "Courses route";
+});
+
+Route::get('courses/{course}' , function ($course){
+    return "Welcome to : $course";
 });
