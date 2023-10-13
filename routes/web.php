@@ -1,7 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 
+use Illuminate\Support\Facades\Route;
+use a
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,16 +15,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    // return view('welcome');
-    return "Root";
-});
-
+Route::get('/', HomeController::class);
 
 Route::get('courses' , function (){
     return "Courses route";
 });
 
-Route::get('courses/{course}' , function ($course){
-    return "Welcome to : $course";
+Route::get('courses/create' , function (){
+    return "On this page you can create a course";
 });
+
+Route::get('courses/{course}/{category?}' , function ($course, $category = null ){
+    
+    if ($category) {
+        return "Welcome to course $course of category $category";
+    } else {
+        return "Welcome to course $course";
+    }
+
+});
+
+
