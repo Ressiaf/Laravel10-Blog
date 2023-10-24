@@ -7,15 +7,15 @@ namespace App\Http\Controllers;
 class CoursesController extends Controller
 {
     public function index(){
-        return "Courses index";
+        return view('courses.index');
     }
 
     public function create(){
-        return "On this page you can create a course - Form ";
+        return view('courses.create');
     }
 
     public function show($course){
-        return "Welcome to course $course";
+        return view('courses.show', compact('course'));
     }
 }
 
