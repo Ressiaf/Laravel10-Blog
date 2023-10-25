@@ -7,4 +7,3 @@
 @section('content')
     <h1>Courses index</h1>
 @endsection
-
