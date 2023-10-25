@@ -8,3 +8,4 @@
     <h1>Welcome to course: {{$course}} for begginers</h1>
 @endsection
 
+ 
